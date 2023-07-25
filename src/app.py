@@ -14,6 +14,9 @@ import threading
 app = dash.Dash(__name__, external_stylesheets=[r'assets/styles.css'])
 server = app.server
 
+app.title = "Timeline Graph"
+app.favicon = "assets/favicon.ico"
+
 title = html.H1("Timeline graph")
 upload = html.Div([
     dcc.Upload(
@@ -113,7 +116,7 @@ step1 = html.Div([
 step2 = html.Div([
     html.H3("Step 2: Sheet 2"),
     html.Img(src='/assets/step2.png',className='image-holder'),
-    html.P("The second sheet contains the milestones with column headings 'Label','Date'",className='img-caption')
+    html.P("The second sheet contains the milestones with column headings 'Date' and 'Label'",className='img-caption')
 ], className='steps')
 step3 = html.Div([
     html.H3("Step 3: Save and upload"),
